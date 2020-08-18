@@ -1,0 +1,49 @@
+
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+table.hovertable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+table.hovertable th {
+    background-color:#ff6347;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.hovertable tr {
+    background-color:#d4e3e5;
+}
+table.hovertable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+</style>
+
+<!-- Table goes in the document BODY -->
+
+<head>
+
+<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+
+</head>
+
+<table class="hovertable">
+<tr>
+    <th>#</th><th>接口 URL</th><th>请求数据</th><th>接口响应数据</th><th>接口调用耗时(单位：ms)</th><th>断言关键字</th><th>测试结果</th>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>1</td><td>http://39.106.41.11:8080/register/</td><td>{&quot;username&quot;: &quot;tiansl2831&quot;, &quot;password&quot;: &quot;xiaoli123451&quot;, &quot;email&quot;: &quot;xiaoli@qq.com&quot;}</td><td>{&quot;username&quot;: &quot;tiansl2831&quot;, &quot;code&quot;: &quot;01&quot;}</td><td>5ms</td><td>00</td><td>
+    <fond color=green>
+    pass</td>
+</tr>
+</table>
+    

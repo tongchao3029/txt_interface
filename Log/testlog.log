@@ -1,0 +1,43 @@
+2020-07-04 20:52:16 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:register, http_method:POST,params:{"username":"testman2020${uniquenumber}","password":"qwer12345","email": "testman@qq.com"}, params_type:json,assert_keyword:"code": "00",assert_keywordinfo:userid--->"userid": (\w+)
+2020-07-04 20:52:16 testScript.py[line:37]-INFO:----------处理请求参数----------
+2020-07-04 20:52:16 testScript.py[line:65]-INFO:----------处理响应数据----------
+2020-07-04 20:52:16 testScript.py[line:67]-INFO:数据存储--->data_rely:{'num': '220', 'userid': 1046}
+2020-07-04 20:52:16 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:16 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:login, http_method:POST,params:{"username":"testman2020${num}","password":"${get_md5('qwer12345')}"}, params_type:json,assert_keyword:"token",assert_keywordinfo:token--->"token": "(\w+)"
+2020-07-04 20:52:16 testScript.py[line:37]-INFO:----------处理请求参数----------
+2020-07-04 20:52:16 testScript.py[line:65]-INFO:----------处理响应数据----------
+2020-07-04 20:52:16 testScript.py[line:67]-INFO:数据存储--->data_rely:{'num': '220', 'userid': 1046, 'token': 'ba86ebe21c3a6b981505e303f48f3067'}
+2020-07-04 20:52:16 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:16 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:create, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}", "title":"python1", "content":"i love python1"}, params_type:json,assert_keyword:"code": "00",assert_keywordinfo:None
+2020-07-04 20:52:16 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:16 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:16 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:getBlogsOfUser, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}"}, params_type:data,assert_keyword:"data",assert_keywordinfo:articleId1--->"i love python1", "articleId": (\d+)
+2020-07-04 20:52:16 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:16 testScript.py[line:65]-INFO:----------处理响应数据----------
+2020-07-04 20:52:16 testScript.py[line:67]-INFO:数据存储--->data_rely:{'num': '220', 'userid': 1046, 'token': 'ba86ebe21c3a6b981505e303f48f3067', 'articleId1': 290}
+2020-07-04 20:52:16 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:16 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:create, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}", "title":"python2", "content":"i love python2"}, params_type:json,assert_keyword:"code": "00",assert_keywordinfo:None
+2020-07-04 20:52:16 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:getBlogsOfUser, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}"}, params_type:data,assert_keyword:"data",assert_keywordinfo:articleId2--->"i love python2", "articleId": (\d+)
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:65]-INFO:----------处理响应数据----------
+2020-07-04 20:52:17 testScript.py[line:67]-INFO:数据存储--->data_rely:{'num': '220', 'userid': 1046, 'token': 'ba86ebe21c3a6b981505e303f48f3067', 'articleId1': 290, 'articleId2': 291}
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:update, http_method:PUT,params:{"userid":"%{userid}", "token":"%{token}","articleId":"%{articleId1}","title":"java1", "content":"i love java1"}, params_type:data,assert_keyword:"update_time",assert_keywordinfo:None
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:getBlogContent, http_method:GET,params:"%{articleId1}", params_type:url,assert_keyword:"articleId":,assert_keywordinfo:data--->"data": (.*}])
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:65]-INFO:----------处理响应数据----------
+2020-07-04 20:52:17 testScript.py[line:67]-INFO:数据存储--->data_rely:{'num': '220', 'userid': 1046, 'token': 'ba86ebe21c3a6b981505e303f48f3067', 'articleId1': 290, 'articleId2': 291, 'data': '[{"update_time": "2020-07-04 20:52:18", "title": "java1", "content": "i love java1", "articleId": 290, "owner": 1046, "posted_on": "2020-07-04 20:52:17"}]'}
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:getBlogsContent, http_method:GET,params:"articleIds=%{articleId1},%{articleId2}", params_type:url,assert_keyword:"code": "10",assert_keywordinfo:None
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:delete, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}","articleId":["%{articleId1}","%{articleId2}"]}, params_type:json,assert_keyword:"articleId":,assert_keywordinfo:None
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------
+2020-07-04 20:52:17 testScript.py[line:35]-DEBUG:当前测试用例--->request_url:getBlogsOfUser, http_method:POST,params:{"userid":"%{userid}", "token":"%{token}"}, params_type:data,assert_keyword:"data",assert_keywordinfo:None
+2020-07-04 20:52:17 testScript.py[line:41]-INFO:----------处理关联参数----------
+2020-07-04 20:52:17 testScript.py[line:68]-INFO:----------断言响应结果----------

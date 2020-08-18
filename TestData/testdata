@@ -1,0 +1,12 @@
+#格式说明分别为url，请求方式，参数，参数类型，断言关键字，数据存储内容
+register||POST||{"username":"testman2020${uniquenumber}","password":"qwer12345","email": "testman@qq.com"}||json||"code": "00"||userid--->"userid": (\w+)
+login||POST||{"username":"testman2020${num}","password":"${get_md5('qwer12345')}"}||json||"token"||token--->"token": "(\w+)"
+create||POST||{"userid":"%{userid}", "token":"%{token}", "title":"python1", "content":"i love python1"}||json||"code": "00"||None
+getBlogsOfUser||POST||{"userid":"%{userid}", "token":"%{token}"}||data||"data"||articleId1--->"i love python1", "articleId": (\d+)
+create||POST||{"userid":"%{userid}", "token":"%{token}", "title":"python2", "content":"i love python2"}||json||"code": "00"||None
+getBlogsOfUser||POST||{"userid":"%{userid}", "token":"%{token}"}||data||"data"||articleId2--->"i love python2", "articleId": (\d+)
+update||PUT||{"userid":"%{userid}", "token":"%{token}","articleId":"%{articleId1}","title":"java1", "content":"i love java1"}||data||"update_time"||None
+getBlogContent||GET||"%{articleId1}"||url||"articleId":||data--->"data": (.*}])
+getBlogsContent||GET||"articleIds=%{articleId1},%{articleId2}"||url||"code": "10"||None
+delete||POST||{"userid":"%{userid}", "token":"%{token}","articleId":["%{articleId1}","%{articleId2}"]}||json||"articleId":||None
+getBlogsOfUser||POST||{"userid":"%{userid}", "token":"%{token}"}||data||"data"||None

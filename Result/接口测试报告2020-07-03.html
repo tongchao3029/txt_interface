@@ -1,0 +1,98 @@
+
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+table.hovertable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+table.hovertable th {
+    background-color:#ff6347;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.hovertable tr {
+    background-color:#d4e3e5;
+}
+table.hovertable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+</style>
+
+<!-- Table goes in the document BODY -->
+
+<head>
+
+<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+
+</head>
+
+<table class="hovertable">
+<tr>
+    <th>#</th><th>接口 URL</th><th>请求数据</th><th>接口响应数据</th><th>接口调用耗时(单位：ms)</th><th>断言词</th><th>测试结果</th>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>1</td><td>http://39.100.104.214:8080/register/</td><td>{&quot;username&quot;:&quot;testman2020199&quot;,&quot;password&quot;:&quot;qwer12345&quot;,&quot;email&quot;: &quot;testman@qq.com&quot;}</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>36</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>2</td><td>http://39.100.104.214:8080/login/</td><td>{&quot;username&quot;:&quot;testman2020199&quot;,&quot;password&quot;:&quot;9a3bdc603c940a18467d167af15d4c8c&quot;}</td><td>{&quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025, &quot;login_time&quot;: &quot;2020-07-03 22:05:28&quot;}</td><td>26</td><td>&quot;token&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>3</td><td>http://39.100.104.214:8080/create/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;, &quot;title&quot;: &quot;python1&quot;, &quot;content&quot;: &quot;i love python1&quot;}</td><td>{&quot;data&quot;: [{&quot;content&quot;: &quot;i love python1&quot;, &quot;title&quot;: &quot;python1&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>29</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>4</td><td>http://39.100.104.214:8080/getBlogsOfUser/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;}</td><td>{&quot;data&quot;: [{&quot;update_time&quot;: null, &quot;title&quot;: &quot;python1&quot;, &quot;content&quot;: &quot;i love python1&quot;, &quot;articleId&quot;: 250, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>24</td><td>&quot;data&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>5</td><td>http://39.100.104.214:8080/create/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;, &quot;title&quot;: &quot;python2&quot;, &quot;content&quot;: &quot;i love python2&quot;}</td><td>{&quot;data&quot;: [{&quot;content&quot;: &quot;i love python2&quot;, &quot;title&quot;: &quot;python2&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>29</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>6</td><td>http://39.100.104.214:8080/getBlogsOfUser/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;}</td><td>{&quot;data&quot;: [{&quot;update_time&quot;: null, &quot;title&quot;: &quot;python1&quot;, &quot;content&quot;: &quot;i love python1&quot;, &quot;articleId&quot;: 250, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}, {&quot;update_time&quot;: null, &quot;title&quot;: &quot;python2&quot;, &quot;content&quot;: &quot;i love python2&quot;, &quot;articleId&quot;: 251, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>37</td><td>&quot;data&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>7</td><td>http://39.100.104.214:8080/update/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;, &quot;articleId&quot;: 250, &quot;title&quot;: &quot;java1&quot;, &quot;content&quot;: &quot;i love java1&quot;}</td><td>{&quot;articleId&quot;: 250, &quot;update_time&quot;: &quot;2020-07-03 22:05:28&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>31</td><td>&quot;update_time&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>8</td><td>http://39.100.104.214:8080/getBlogContent/250</td><td>250</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;data&quot;: [{&quot;update_time&quot;: &quot;2020-07-03 22:05:28&quot;, &quot;title&quot;: &quot;java1&quot;, &quot;content&quot;: &quot;i love java1&quot;, &quot;articleId&quot;: 250, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}]}</td><td>25</td><td>&quot;articleId&quot;:</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>9</td><td>http://39.100.104.214:8080/getBlogsContent/articleIds=250,251</td><td>articleIds=250,251</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;data&quot;: [{&quot;update_time&quot;: &quot;2020-07-03 22:05:28&quot;, &quot;title&quot;: &quot;java1&quot;, &quot;content&quot;: &quot;i love java1&quot;, &quot;articleId&quot;: 250, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}, {&quot;update_time&quot;: null, &quot;title&quot;: &quot;python2&quot;, &quot;content&quot;: &quot;i love python2&quot;, &quot;articleId&quot;: 251, &quot;owner&quot;: 1025, &quot;posted_on&quot;: &quot;2020-07-03 22:05:28&quot;}]}</td><td>29</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>10</td><td>http://39.100.104.214:8080/delete/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;, &quot;articleId&quot;: [250, 251]}</td><td>{&quot;articleId&quot;: [250, 251], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>33</td><td>&quot;articleId&quot;:</td><td>
+    pass</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+
+    <td>11</td><td>http://39.100.104.214:8080/getBlogsOfUser/</td><td>{&quot;userid&quot;: 1025, &quot;token&quot;: &quot;ce89c086ad14d5d0f151760c335d70b4&quot;}</td><td>{&quot;data&quot;: [], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1025}</td><td>25</td><td>&quot;data&quot;</td><td>
+    pass</td>
+</tr>
+</table>
+    
